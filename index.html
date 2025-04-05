@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEX DUBAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        pulse: 'pulse 2s infinite',
+                        wiggle: 'wiggle 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            background: url('logo.jpg') center/cover no-repeat;
+        }
+.button{
+    animation: scale-animation 1s linear infinite ;
+}
+        @keyframes scale-animation {
+  0% {
+    transform: scale(.9);
+  }
+  50% {
+    transform: scale(1); /* Slightly larger */
+  }
+  100% {
+    transform: scale(.9); /* Back to original size */
+}
+        }
+
+/* Applying animation to the button */
+#button1{
+  animation: scale-animation 2s infinite ease-in-out; /* 2s duration, infinite loop */
+}
+    </style>
+</head>
+
+<body class="h-screen w-screen flex items-center justify-center text-white bg-gray-900">
+
+    <div class="h-full w-full bg-black/80 flex flex-col justify-center items-center px-4">
+        <!-- Title -->
+         <img src="logo.jpg" alt="" class="w-28 h-28 border-2 rounded my-2 border-white ">
+        <h1 class="text-4xl text-center text-sm lg:text-4xl font-extrabold text-orange-500 animate-wiggle drop-shadow-md mb-6">
+            WELCOME TO ALEX DUBAI🎭
+        </h1>
+
+        <!-- Countdown -->
+        <div  class="text-center text-3xl md:text-5xl font-bold text-yellow-400 drop-shadow-xl mb-4">
+            <strong>00 : 00 : <strong id="countdown" class="text-4xl text-red-600  font-bold " style="text-shadow: 1px 1px white;" >Loading... ⏳</strong> Seconds Left </strong>
+        </div>
+<h3 class="text-center text-2xl font-bold" >Hurry Up joining Free</h3>
+        <!-- Join Now Section -->
+       
+
+        <!-- Note Section -->
+        <div class="text-center my-2">
+            <p class="text-sm md:text-lg text-yellow-200">
+                🤑 JALDI JOIN KRO AUR LAKHON KAMAO 🤑
+            </p>
+            <h1 class="text-2xl lg:text-4xl font-bold my-2 text-red-500 drop-shadow-md">
+                FREE FREE FREE
+            </h1>
+        </div>
+        <a href="https://t.me/+J3QoipOIsEM0N2I1" class="my-4">
+            <button class=" button flex place-items-center  gap-2 px-4 py-2 bg-red-600 border-b-8 border-black rounded-lg " style="box-shadow: 0px 0px 3px 5px rgb(242, 255, 0);" > 
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                </svg>
+                <span class="uppercase" >subscribe 𝙹𝙾𝙻𝙻𝚈 𝚃𝙾𝚂𝚂 𝙺𝙸𝙽𝙶 telegram</span>
+          </button>
+  
+          </a>
+        <!-- IPL Stats -->
+        <div class="my-2">
+            <p class="text-md md:text-lg font-medium">IPL-73/74 PASS ✅</p>
+            <p class="text-md md:text-lg font-medium">BBL-64/65 PASS ✅</p>
+            <p class="text-md md:text-lg font-medium">PSL-32/34 PASS ✅</p>
+            <p class="text-md md:text-lg font-medium">CPL-37/40 PASS ✅</p>
+        </div>
+
+        <!-- Subscriber Count -->
+     
+    </div>
+
+    <!-- Countdown Script -->
+    <script>
+        let timeLeft = 30; // Start at 30 seconds
+        const countdownElement = document.getElementById("countdown");
+    
+        const timerInterval = setInterval(() => {
+          if (timeLeft > 0) {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+          } else {
+            // clearInterval(timerInterval);
+            // Add what happens after the timer ends
+            timeLeft=30;
+           
+          }
+        }, 1000);
+      </script>
+</body>
+
+</html>
